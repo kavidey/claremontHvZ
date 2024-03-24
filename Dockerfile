@@ -13,4 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 RUN python ./setup.py --skipdeps
-CMD [ "python", "./manage.py", "runserver" ]
+
+ENV DJANGO_SETTINGS_MODULE=hvz.settings
+CMD ["python", "./manage.py", "runserver", "0.0.0.0:8000"]
