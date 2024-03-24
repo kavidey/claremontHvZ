@@ -26,11 +26,11 @@ def main():
     auto = options.auto
     skip_deps = options.skipdeps
 
-    if not hasattr(sys, 'real_prefix'):
-        print("Not inside a virtualenv! Run")
-        print("    source bin/activate")
-        print("from the root directory of your site to enter the virtualenv")
-        return
+    # if not hasattr(sys, 'real_prefix'):
+    #     print("Not inside a virtualenv! Run")
+    #     print("    source bin/activate")
+    #     print("from the root directory of your site to enter the virtualenv")
+    #     return
 
     project_path = os.path.dirname(os.path.abspath(__file__))
     old_dir = os.getcwd()
